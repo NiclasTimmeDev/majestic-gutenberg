@@ -65,6 +65,8 @@ module.exports = (env, argv) => {
     externals: {
       '@wordpress/blocks': ['wp', 'blocks'],
       '@wordpress/i18n': ['wp', '__'],
+      '@wordpress/editor': ['wp', 'editor'],
+      '@wordpress/components': ['wp', 'components'],
     },
   };
 

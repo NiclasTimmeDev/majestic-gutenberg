@@ -52,7 +52,7 @@ function majestic_gutenberg_init()
     wp_register_script(
         'majestic-gutenberg-editor-script',
         plugins_url('dist/editor.js', __FILE__),
-        array('wp-blocks', 'wp-i18n')
+        array('wp-blocks', 'wp-i18n', 'wp-editor', 'wp-components')
     );
 
     // Register the frontend JS script.

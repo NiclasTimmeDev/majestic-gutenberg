@@ -1,0 +1,2 @@
+!function(){"use strict";var e=wp.blocks,t=wp.__;(0,e.registerBlockType)("majestic-gutenberg/firstblock",{title:(0,t.__)("First block","majestic-gutenberg"),description:(0,t.__)("My First block","majestic-gutenberg"),category:"layout",edit:function(){return wp.element.createElement("p",null,"Editor")},save:function(){return wp.element.createElement("p",null,"Saved")}})}();
+//# sourceMappingURL=editor.js.map

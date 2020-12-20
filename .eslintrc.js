@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['eslint:recommended'],
+  extends: ['eslint:recommended', 'plugin:react/recommended'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -15,6 +15,9 @@ module.exports = {
   plugins: ['react'],
   rules: {
     'no-console': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/display-name': 'off',
+    'react/prop-types': 'off',
   },
   globals: {
     Atomics: 'readonly',

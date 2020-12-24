@@ -32,8 +32,14 @@ module.exports = (env, argv) => {
             // Babel loader to transpile Next gen JS to ES5.
             loader: 'babel-loader',
             options: {
+              // Plugins that add additional compiling info.
+              plugins: [
+                // Use arrow functions in class files.
+                '@babel/plugin-proposal-class-properties',
+              ],
               // Presets or predefined rules.
               presets: [
+                // Babel standard compiling.
                 '@babel/preset-env',
                 [
                   '@babel/preset-react',
@@ -62,9 +68,11 @@ module.exports = (env, argv) => {
      */
     externals: {
       '@wordpress/blocks': ['wp', 'blocks'],
-      '@wordpress/i18n': ['wp', '__'],
+      '@wordpress/i18n': ['wp', 'i18n'],
       '@wordpress/editor': ['wp', 'editor'],
+      '@wordpress/block-editor': ['wp', 'block-editor'],
       '@wordpress/components': ['wp', 'components'],
+      '@wordpress/element': ['wp', 'element'],
     },
   };
 

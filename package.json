@@ -13,6 +13,7 @@
   "author": "Niclas Timm",
   "license": "MIT",
   "dependencies": {
+    "@wordpress/block-editor": "^5.2.0",
     "@wordpress/blocks": "^6.25.0",
     "@wordpress/i18n": "^3.17.0",
     "autoprefixer": "^10.1.0",
@@ -23,12 +24,15 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "@wordpress/browserslist-config": "^2.7.0",
     "@wordpress/components": "^12.0.0",
     "@wordpress/editor": "^9.25.0",
+    "@wordpress/element": "^2.19.0",
     "@wordpress/eslint-plugin": "^7.4.0",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "browserslist": "^4.16.0",
     "eslint": "^7.16.0",

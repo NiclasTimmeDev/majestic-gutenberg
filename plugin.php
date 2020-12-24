@@ -44,6 +44,32 @@ function majestic_gutenberg_register_block(string $block_name, array $custom_opt
 }
 
 /**
+ * Add a new category named 'Majestic Gutenberg' to the default block categories.
+ * 
+ * @param array $categories
+ *   Array of block categories.
+ * @param WP_POST $post
+ *   Post being loaded.
+ * 
+ * @return array
+ *   Tne new block category.
+ */
+function majestic_gutenberg_categories($categories, $post)
+{
+    return array_merge(
+        $categories,
+        array(
+            array(
+                'slug' => 'majestic-gutenberg-category',
+                'title' => __('Majestig Gutenberg', 'majestic-gutenberg'),
+                'icon' => 'wordpress',
+            ),
+        )
+    );
+}
+add_filter('block_categories', 'majestic_gutenberg_categories', 10, 2);
+
+/**
  * Init the Gutenberg settings and options. Execute on plugin init.
  */
 function majestic_gutenberg_init()
@@ -52,7 +78,7 @@ function majestic_gutenberg_init()
     wp_register_script(
         'majestic-gutenberg-editor-script',
         plugins_url('dist/editor.js', __FILE__),
-        array('wp-blocks', 'wp-i18n', 'wp-editor', 'wp-components')
+        array('wp-blocks', 'wp-element', 'wp-i18n', 'wp-block-editor', 'wp-components')
     );
 
     // Register the frontend JS script.

@@ -26,12 +26,20 @@ registerBlockType('majestic-gutenberg/firstblock', {
   save({ attributes }) {
     const { content } = attributes;
     return (
-      // Content of Richt text component.
-      <RichText.Content
-        tagName="p"
-        value={content}
-        className="w-full bg-red-700"
-      />
+      // Header.
+      <>
+        <RichText.Content
+          tagName="p"
+          value={content}
+          className="w-full bg-red-700"
+        />
+        {/* Content */}
+        <RichText.Content
+          tagName="p"
+          value={content}
+          className="w-full bg-red-700"
+        />
+      </>
     );
   },
 });

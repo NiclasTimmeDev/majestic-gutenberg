@@ -96,5 +96,7 @@ function majestic_gutenberg_init()
     );
 
     majestic_gutenberg_register_block('firstblock');
+    // Inline Notice Block.
+    majestic_gutenberg_register_block('inline-notice');
 }
 add_action('init', 'majestic_gutenberg_init');

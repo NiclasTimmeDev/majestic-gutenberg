@@ -2,6 +2,142 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/blocks/Testimonials/edit.js":
+/*!*****************************************!*\
+  !*** ./src/blocks/Testimonials/edit.js ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var _jsxFileName = "/Users/niclastimm/code/projects/gutenberg/app/public/wp-content/plugins/majestic-gutenberg/src/blocks/Testimonials/edit.js";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+//==================================================
+// The edit functionality of the Inline Notice block.
+//==================================================
+
+
+
+var TestimonialsEdit = /*#__PURE__*/function (_Component) {
+  _inherits(TestimonialsEdit, _Component);
+
+  var _super = _createSuper(TestimonialsEdit);
+
+  function TestimonialsEdit() {
+    _classCallCheck(this, TestimonialsEdit);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(TestimonialsEdit, [{
+    key: "render",
+    value: function render() {
+      return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12,
+          columnNumber: 9
+        }
+      }, "Hello World!"));
+    }
+  }]);
+
+  return TestimonialsEdit;
+}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (TestimonialsEdit);
+
+/***/ }),
+
+/***/ "./src/blocks/Testimonials/index.js":
+/*!******************************************!*\
+  !*** ./src/blocks/Testimonials/index.js ***!
+  \******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/blocks/Testimonials/edit.js");
+var _jsxFileName = "/Users/niclastimm/code/projects/gutenberg/app/public/wp-content/plugins/majestic-gutenberg/src/blocks/Testimonials/index.js";
+//==================================================
+// The main functionality of the Team Members block.
+//==================================================
+
+
+var RichText = wp.blockEditor.RichText;
+
+/**
+ * Register a new blocktype.
+ */
+
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)('majestic-gutenberg/testimonials', {
+  // Meta info.
+  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Testimonials', 'majestic-gutenberg'),
+  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Show of some great reviews of your users.'), 'majestic-gutenberg'),
+  category: 'majestic-gutenberg-category',
+  keywords: [(0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('info', 'majestic-gutenberg'), (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('grid', 'majestic-gutenberg'), (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('testimonial', 'majestic-gutenberg'), (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('review', 'majestic-gutenberg')],
+  // The main variables that define the content and layout of the block.
+  attributes: {},
+
+  /**
+   * Define the edit output of the block.
+   */
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__.default,
+
+  /**
+   * Define the frontend output of the block.
+   *
+   * @param {object} attributes
+   *   The attributes for the component.
+   */
+  save: function save(_ref) {
+    var attributes = _ref.attributes;
+    //const {} = attributes;
+    // ==================================
+    // Return statement.
+    // ==================================
+    return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement("div", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47,
+        columnNumber: 9
+      }
+    }, "Hello World"));
+  }
+});
+
+/***/ }),
+
 /***/ "./src/blocks/firstblock/edit.js":
 /*!***************************************!*\
   !*** ./src/blocks/firstblock/edit.js ***!
@@ -596,7 +732,9 @@ var RichText = wp.blockEditor.RichText;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_firstblock_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/firstblock/index */ "./src/blocks/firstblock/index.js");
 /* harmony import */ var _blocks_inlineNotice_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/inlineNotice/index */ "./src/blocks/inlineNotice/index.js");
+/* harmony import */ var _blocks_Testimonials_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/Testimonials/index */ "./src/blocks/Testimonials/index.js");
 // First block.
+
 
 
 

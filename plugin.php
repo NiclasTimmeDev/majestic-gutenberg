@@ -95,8 +95,12 @@ function majestic_gutenberg_init()
         array('wp-edit-blocks')
     );
 
+    // Testblock.
+    // TODO: Remove this block.
     majestic_gutenberg_register_block('firstblock');
     // Inline Notice Block.
     majestic_gutenberg_register_block('inline-notice');
+    // Inline Notice Block.
+    majestic_gutenberg_register_block('testimonials');
 }
 add_action('init', 'majestic_gutenberg_init');

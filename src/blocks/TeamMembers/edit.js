@@ -11,6 +11,7 @@ import {
   Panel,
   PanelRow,
 } from '@wordpress/components';
+import ResponsiveDisplay from './../../components/ResponsiveDisplay/ResponsiveDisplay';
 
 /**
  * The class for editing the block in the gutenberg editor.
@@ -23,6 +24,25 @@ class TeamMembersEdit extends Component {
     this.props.setAttributes({ info });
   };
 
+  designSettings = (
+    <>
+      <ResponsiveDisplay
+        hideOnDesktop={false}
+        hideOnTablet={false}
+        hideOnMobile={false}
+        toggleDesktop={() => {
+          console.log('Toggle Desktop');
+        }}
+        toggleTablet={() => {
+          console.log('Toggle Tablet');
+        }}
+        toggleMobile={() => {
+          console.log('Toggle Mobile');
+        }}
+      />
+    </>
+  );
+
   render() {
     const { attributes } = this.props;
     const { title, info } = attributes;
@@ -32,7 +52,7 @@ class TeamMembersEdit extends Component {
         <InspectorControls>
           <Panel>
             <PanelTab
-              design={<div>Design</div>}
+              design={this.designSettings}
               style={<div>Style</div>}
               advanced={<div>Advanced</div>}
             />

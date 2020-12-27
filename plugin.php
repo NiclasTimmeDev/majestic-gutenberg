@@ -102,5 +102,8 @@ function majestic_gutenberg_init()
     majestic_gutenberg_register_block('inline-notice');
     // Inline Notice Block.
     majestic_gutenberg_register_block('testimonials');
+    // Team Members Block.
+    majestic_gutenberg_register_block('team-members');
+    majestic_gutenberg_register_block('parent');
 }
 add_action('init', 'majestic_gutenberg_init');

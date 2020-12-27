@@ -2,6 +2,384 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/blocks/TeamMembers/edit.js":
+/*!****************************************!*\
+  !*** ./src/blocks/TeamMembers/edit.js ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var _jsxFileName = "/Users/niclastimm/code/projects/gutenberg/app/public/wp-content/plugins/majestic-gutenberg/src/blocks/TeamMembers/edit.js";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var InspectorControls = wp.blockEditor.InspectorControls;
+var PanelColorSettings = wp.blockEditor.PanelColorSettings;
+var RichText = wp.blockEditor.RichText;
+var withColors = wp.blockEditor.withColors;
+/**
+ * The class for editing the block in the gutenberg editor.
+ */
+
+var TeamMembersEdit = /*#__PURE__*/function (_Component) {
+  _inherits(TeamMembersEdit, _Component);
+
+  var _super = _createSuper(TeamMembersEdit);
+
+  function TeamMembersEdit() {
+    var _this;
+
+    _classCallCheck(this, TeamMembersEdit);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "onChangeTitle", function (title) {
+      _this.props.setAttributes({
+        title: title
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onChangeInfo", function (info) {
+      _this.props.setAttributes({
+        info: info
+      });
+    });
+
+    return _this;
+  }
+
+  _createClass(TeamMembersEdit, [{
+    key: "render",
+    value: function render() {
+      var attributes = this.props.attributes;
+      var title = attributes.title,
+          info = attributes.info;
+      return wp.element.createElement("div", {
+        className: "w-full p-3 bg-white rounded-md shadow-md",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23,
+          columnNumber: 7
+        }
+      }, wp.element.createElement(RichText, {
+        className: "w-full",
+        value: title,
+        tagName: "h4",
+        onChange: this.onChangeTitle,
+        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('The name of the team member', 'majestic-gutenberg'),
+        formattingControls: [],
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24,
+          columnNumber: 9
+        }
+      }), wp.element.createElement(RichText, {
+        className: "w-full",
+        value: info,
+        tagName: "p",
+        onChange: this.onChangeInfo,
+        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Write something about the team member', 'majestic-gutenberg'),
+        formattingControls: [],
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32,
+          columnNumber: 9
+        }
+      }));
+    }
+  }]);
+
+  return TeamMembersEdit;
+}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (withColors('backgroundColor')(TeamMembersEdit));
+
+/***/ }),
+
+/***/ "./src/blocks/TeamMembers/index.js":
+/*!*****************************************!*\
+  !*** ./src/blocks/TeamMembers/index.js ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/blocks/TeamMembers/edit.js");
+var _jsxFileName = "/Users/niclastimm/code/projects/gutenberg/app/public/wp-content/plugins/majestic-gutenberg/src/blocks/TeamMembers/index.js";
+
+
+var RichText = wp.blockEditor.RichText;
+ //import { PanelBody } from '@wordpress/components';
+
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)('majestic-gutenberg/team-members', {
+  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Team member', 'majestic-gutenberg'),
+  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Team Member', 'majestic-gutenberg'),
+  category: 'majestic-gutenberg-category',
+  keywords: '',
+  icon: 'admin-users',
+  parent: ['majestic-gutenberg/parent'],
+  attributes: {
+    title: {
+      type: 'string',
+      source: 'html',
+      selector: 'h4'
+    },
+    info: {
+      type: 'string',
+      source: 'html',
+      selector: 'p'
+    }
+  },
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__.default,
+  save: function save(_ref) {
+    var attributes = _ref.attributes;
+    var title = attributes.title,
+        info = attributes.info;
+    return wp.element.createElement("div", {
+      className: "w-full p-3 bg-white rounded-md shadow-md",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31,
+        columnNumber: 7
+      }
+    }, title && wp.element.createElement(RichText.Content, {
+      className: "w-full",
+      value: title,
+      tagName: "h4",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33,
+        columnNumber: 11
+      }
+    }), info && wp.element.createElement(RichText.Content, {
+      className: "w-full",
+      value: info,
+      tagName: "p",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36,
+        columnNumber: 11
+      }
+    }));
+  }
+});
+
+/***/ }),
+
+/***/ "./src/blocks/TeamMembers/parent.js":
+/*!******************************************!*\
+  !*** ./src/blocks/TeamMembers/parent.js ***!
+  \******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/blocks/TeamMembers/edit.js");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/niclastimm/code/projects/gutenberg/app/public/wp-content/plugins/majestic-gutenberg/src/blocks/TeamMembers/parent.js",
+    _this = undefined;
+
+
+
+var InnerBlocks = wp.blockEditor.InnerBlocks;
+var InspectorControls = wp.blockEditor.InspectorControls;
+
+
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)('majestic-gutenberg/parent', {
+  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Team members', 'majestic-gutenberg'),
+  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Team Members', 'majestic-gutenberg'),
+  category: 'majestic-gutenberg-category',
+  keywords: '',
+  icon: 'grid-view',
+  attributes: {
+    columns: {
+      type: 'number',
+      default: 2
+    },
+    gap: {
+      type: 'number',
+      default: 1
+    }
+  },
+  edit: function edit(_ref) {
+    var attributes = _ref.attributes,
+        setAttributes = _ref.setAttributes;
+    var columns = attributes.columns,
+        gap = attributes.gap;
+
+    var onChangeColumns = function onChangeColumns(columns) {
+      setAttributes({
+        columns: columns
+      });
+    };
+
+    var onChangeColumnsGap = function onChangeColumnsGap(gap) {
+      setAttributes({
+        gap: gap
+      });
+    };
+
+    var containerClasses = "grid grid-cols-".concat(columns, " gap-").concat(gap);
+    return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(InspectorControls, {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43,
+        columnNumber: 9
+      }
+    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Panel, {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44,
+        columnNumber: 11
+      }
+    }, wp.element.createElement("button", {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45,
+        columnNumber: 13
+      }
+    }, "Hello"), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
+      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Columns', 'majestic-gutenberg'),
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46,
+        columnNumber: 13
+      }
+    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47,
+        columnNumber: 15
+      }
+    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.RangeControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Number of columns', 'majestic-gutenberg'),
+      value: columns,
+      onChange: function onChange(columns) {
+        return onChangeColumns(columns);
+      },
+      min: 1,
+      max: 12,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48,
+        columnNumber: 17
+      }
+    }))), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57,
+        columnNumber: 13
+      }
+    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.RangeControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Column gaps', 'majestic-gutenberg'),
+      value: gap,
+      onChange: function onChange(gap) {
+        return onChangeColumnsGap(gap);
+      },
+      min: 1,
+      max: 4,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58,
+        columnNumber: 15
+      }
+    })))), wp.element.createElement("div", {
+      className: containerClasses,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 68,
+        columnNumber: 9
+      }
+    }, wp.element.createElement(InnerBlocks, {
+      allowedBlocks: ['majestic-gutenberg/team-members'],
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 69,
+        columnNumber: 11
+      }
+    })));
+  },
+  save: function save(_ref2) {
+    var attributes = _ref2.attributes;
+    var columns = attributes.columns,
+        gap = attributes.gap;
+    var containerClasses = "grid grid-cols-".concat(columns, " gap-").concat(gap);
+    return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement("div", {
+      className: containerClasses,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 80,
+        columnNumber: 9
+      }
+    }, wp.element.createElement(InnerBlocks.Content, {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 81,
+        columnNumber: 11
+      }
+    })));
+  }
+});
+
+/***/ }),
+
 /***/ "./src/blocks/Testimonials/edit.js":
 /*!*****************************************!*\
   !*** ./src/blocks/Testimonials/edit.js ***!
@@ -106,7 +484,18 @@ var RichText = wp.blockEditor.RichText;
   category: 'majestic-gutenberg-category',
   keywords: [(0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('info', 'majestic-gutenberg'), (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('grid', 'majestic-gutenberg'), (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('testimonial', 'majestic-gutenberg'), (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('review', 'majestic-gutenberg')],
   // The main variables that define the content and layout of the block.
-  attributes: {},
+  attributes: {
+    name: {
+      type: 'string',
+      source: 'html',
+      selector: 'div'
+    },
+    quote: {
+      type: 'string',
+      source: 'html',
+      selector: 'p'
+    }
+  },
 
   /**
    * Define the edit output of the block.
@@ -129,7 +518,7 @@ var RichText = wp.blockEditor.RichText;
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47,
+        lineNumber: 58,
         columnNumber: 9
       }
     }, "Hello World"));
@@ -733,7 +1122,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_firstblock_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/firstblock/index */ "./src/blocks/firstblock/index.js");
 /* harmony import */ var _blocks_inlineNotice_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/inlineNotice/index */ "./src/blocks/inlineNotice/index.js");
 /* harmony import */ var _blocks_Testimonials_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/Testimonials/index */ "./src/blocks/Testimonials/index.js");
+/* harmony import */ var _blocks_TeamMembers_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/TeamMembers/index */ "./src/blocks/TeamMembers/index.js");
+/* harmony import */ var _blocks_TeamMembers_parent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/TeamMembers/parent */ "./src/blocks/TeamMembers/parent.js");
 // First block.
+
+
 
 
 

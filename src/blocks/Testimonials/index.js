@@ -36,11 +36,6 @@ registerBlockType('majestic-gutenberg/testimonials', {
       source: 'html',
       selector: 'p',
     },
-    // quote: {
-    //   type: 'integer',
-    //   source: 'html',
-    //   selector: 'p'
-    // },
   },
   /**
    * Define the edit output of the block.

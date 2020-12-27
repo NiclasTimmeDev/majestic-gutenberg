@@ -4,6 +4,13 @@ const InspectorControls = wp.blockEditor.InspectorControls;
 const PanelColorSettings = wp.blockEditor.PanelColorSettings;
 const RichText = wp.blockEditor.RichText;
 const withColors = wp.blockEditor.withColors;
+import PanelTab from './../../components/PanelTab/PanelTab';
+import {
+  PanelBody,
+  RangeControl,
+  Panel,
+  PanelRow,
+} from '@wordpress/components';
 
 /**
  * The class for editing the block in the gutenberg editor.
@@ -15,32 +22,47 @@ class TeamMembersEdit extends Component {
   onChangeInfo = info => {
     this.props.setAttributes({ info });
   };
+
   render() {
     const { attributes } = this.props;
     const { title, info } = attributes;
 
     return (
-      <div className="w-full p-3 bg-white rounded-md shadow-md">
-        <RichText
-          className="w-full"
-          value={title}
-          tagName="h4"
-          onChange={this.onChangeTitle}
-          placeholder={__('The name of the team member', 'majestic-gutenberg')}
-          formattingControls={[]}
-        />
-        <RichText
-          className="w-full"
-          value={info}
-          tagName="p"
-          onChange={this.onChangeInfo}
-          placeholder={__(
-            'Write something about the team member',
-            'majestic-gutenberg',
-          )}
-          formattingControls={[]}
-        />
-      </div>
+      <>
+        <InspectorControls>
+          <Panel>
+            <PanelTab
+              design={<div>Design</div>}
+              style={<div>Style</div>}
+              advanced={<div>Advanced</div>}
+            />
+          </Panel>
+        </InspectorControls>
+        <div className="w-full p-3 bg-white rounded-md shadow-md">
+          <RichText
+            className="w-full"
+            value={title}
+            tagName="h4"
+            onChange={this.onChangeTitle}
+            placeholder={__(
+              'The name of the team member',
+              'majestic-gutenberg',
+            )}
+            formattingControls={[]}
+          />
+          <RichText
+            className="w-full"
+            value={info}
+            tagName="p"
+            onChange={this.onChangeInfo}
+            placeholder={__(
+              'Write something about the team member',
+              'majestic-gutenberg',
+            )}
+            formattingControls={[]}
+          />
+        </div>
+      </>
     );
   }
 }

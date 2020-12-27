@@ -13,6 +13,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_PanelTab_PanelTab__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../components/PanelTab/PanelTab */ "./src/components/PanelTab/PanelTab.js");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 var _jsxFileName = "/Users/niclastimm/code/projects/gutenberg/app/public/wp-content/plugins/majestic-gutenberg/src/blocks/TeamMembers/edit.js";
@@ -45,6 +48,8 @@ var InspectorControls = wp.blockEditor.InspectorControls;
 var PanelColorSettings = wp.blockEditor.PanelColorSettings;
 var RichText = wp.blockEditor.RichText;
 var withColors = wp.blockEditor.withColors;
+
+
 /**
  * The class for editing the block in the gutenberg editor.
  */
@@ -86,13 +91,58 @@ var TeamMembersEdit = /*#__PURE__*/function (_Component) {
       var attributes = this.props.attributes;
       var title = attributes.title,
           info = attributes.info;
-      return wp.element.createElement("div", {
+      return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(InspectorControls, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32,
+          columnNumber: 9
+        }
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Panel, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33,
+          columnNumber: 11
+        }
+      }, wp.element.createElement(_components_PanelTab_PanelTab__WEBPACK_IMPORTED_MODULE_2__.default, {
+        design: wp.element.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 35,
+            columnNumber: 23
+          }
+        }, "Design"),
+        style: wp.element.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 36,
+            columnNumber: 22
+          }
+        }, "Style"),
+        advanced: wp.element.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 37,
+            columnNumber: 25
+          }
+        }, "Advanced"),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 34,
+          columnNumber: 13
+        }
+      }))), wp.element.createElement("div", {
         className: "w-full p-3 bg-white rounded-md shadow-md",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23,
-          columnNumber: 7
+          lineNumber: 41,
+          columnNumber: 9
         }
       }, wp.element.createElement(RichText, {
         className: "w-full",
@@ -104,8 +154,8 @@ var TeamMembersEdit = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24,
-          columnNumber: 9
+          lineNumber: 42,
+          columnNumber: 11
         }
       }), wp.element.createElement(RichText, {
         className: "w-full",
@@ -117,10 +167,10 @@ var TeamMembersEdit = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32,
-          columnNumber: 9
+          lineNumber: 53,
+          columnNumber: 11
         }
-      }));
+      })));
     }
   }]);
 
@@ -1109,6 +1159,268 @@ var RichText = wp.blockEditor.RichText;
     })));
   }
 });
+
+/***/ }),
+
+/***/ "./src/components/PanelTab/PanelTab.js":
+/*!*********************************************!*\
+  !*** ./src/components/PanelTab/PanelTab.js ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _PanelTabButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PanelTabButton */ "./src/components/PanelTab/PanelTabButton.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var _jsxFileName = "/Users/niclastimm/code/projects/gutenberg/app/public/wp-content/plugins/majestic-gutenberg/src/components/PanelTab/PanelTab.js";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+/**
+ * An additional tab in the Inspector Panel that
+ * allows for more granular and clear control over
+ * the rendered content.
+ */
+
+var PanelTab = /*#__PURE__*/function (_Component) {
+  _inherits(PanelTab, _Component);
+
+  var _super = _createSuper(PanelTab);
+
+  /**
+   * The constructor function where the state is initialized.
+   *
+   * @param {object} props
+   *   The props
+   */
+  function PanelTab(props) {
+    var _this;
+
+    _classCallCheck(this, PanelTab);
+
+    _this = _super.call(this, props);
+
+    _defineProperty(_assertThisInitialized(_this), "onUpdatePanelTab", function (tab) {
+      // Mimic the state.
+      var showPanelTabContent = {
+        design: false,
+        style: false,
+        advanced: false
+      }; // Update the key-value pair of interest.
+
+      showPanelTabContent[tab] = true; // Set state.
+
+      _this.setState({
+        showPanelTabContent: showPanelTabContent
+      });
+    });
+
+    _this.state = {
+      showPanelTabContent: {
+        design: true,
+        style: false,
+        advanced: false
+      }
+    };
+    return _this;
+  }
+  /**
+   * Set a new active tab.
+   *
+   * @param {string} tab
+   *   The name of the tab.
+   */
+
+
+  _createClass(PanelTab, [{
+    key: "render",
+
+    /**
+     * The render function. It renders the markup.
+     */
+    value: function render() {
+      var _this2 = this;
+
+      return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Panel, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56,
+          columnNumber: 9
+        }
+      }, wp.element.createElement("div", {
+        className: "grid grid-cols-3 gap-0",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57,
+          columnNumber: 11
+        }
+      }, wp.element.createElement(_PanelTabButton__WEBPACK_IMPORTED_MODULE_3__.default, {
+        title: "Design",
+        active: this.state.showPanelTabContent.design,
+        icon: "Icon",
+        onClick: function onClick() {
+          _this2.onUpdatePanelTab('design');
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59,
+          columnNumber: 13
+        }
+      }), wp.element.createElement(_PanelTabButton__WEBPACK_IMPORTED_MODULE_3__.default, {
+        title: "Style",
+        active: this.state.showPanelTabContent.style,
+        icon: "Icon",
+        onClick: function onClick() {
+          _this2.onUpdatePanelTab('style');
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68,
+          columnNumber: 13
+        }
+      }), wp.element.createElement(_PanelTabButton__WEBPACK_IMPORTED_MODULE_3__.default, {
+        title: "Advanced",
+        active: this.state.showPanelTabContent.advanced,
+        icon: "Icon",
+        onClick: function onClick() {
+          _this2.onUpdatePanelTab('advanced');
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77,
+          columnNumber: 13
+        }
+      })), this.state.showPanelTabContent.design && this.props.design, this.state.showPanelTabContent.style && this.props.style, this.state.showPanelTabContent.advanced && this.props.advanced));
+    }
+  }]);
+
+  return PanelTab;
+}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (PanelTab);
+
+/***/ }),
+
+/***/ "./src/components/PanelTab/PanelTabButton.js":
+/*!***************************************************!*\
+  !*** ./src/components/PanelTab/PanelTabButton.js ***!
+  \***************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var _jsxFileName = "/Users/niclastimm/code/projects/gutenberg/app/public/wp-content/plugins/majestic-gutenberg/src/components/PanelTab/PanelTabButton.js";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var PanelTabButton = /*#__PURE__*/function (_Component) {
+  _inherits(PanelTabButton, _Component);
+
+  var _super = _createSuper(PanelTabButton);
+
+  function PanelTabButton() {
+    _classCallCheck(this, PanelTabButton);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(PanelTabButton, [{
+    key: "render",
+    value: function render() {
+      return wp.element.createElement("button", {
+        onClick: this.props.onClick,
+        className: "w-full flex flex-col justify-center items-center m-0 p-2 bg-white text-black focus:outline-none ".concat(this.props.active ? 'bg-gray-100' : ''),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 7,
+          columnNumber: 7
+        }
+      }, wp.element.createElement("span", {
+        className: "mx-auto inline-block mb-1",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13,
+          columnNumber: 9
+        }
+      }, this.props.icon), wp.element.createElement("span", {
+        className: "inline-block mx-auto",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14,
+          columnNumber: 9
+        }
+      }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)(this.props.title, 'majestic-gutenberg')));
+    }
+  }]);
+
+  return PanelTabButton;
+}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (PanelTabButton);
 
 /***/ }),
 

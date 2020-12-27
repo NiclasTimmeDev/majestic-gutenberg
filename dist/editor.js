@@ -100,7 +100,7 @@ var TeamMembersEdit = /*#__PURE__*/function (_Component) {
       __self: _assertThisInitialized(_this),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29,
+        lineNumber: 30,
         columnNumber: 7
       }
     })));
@@ -118,14 +118,14 @@ var TeamMembersEdit = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52,
+          lineNumber: 53,
           columnNumber: 9
         }
       }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Panel, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53,
+          lineNumber: 54,
           columnNumber: 11
         }
       }, wp.element.createElement(_components_PanelTab_PanelTab__WEBPACK_IMPORTED_MODULE_2__.default, {
@@ -134,7 +134,7 @@ var TeamMembersEdit = /*#__PURE__*/function (_Component) {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 56,
+            lineNumber: 57,
             columnNumber: 22
           }
         }, "Style"),
@@ -142,14 +142,14 @@ var TeamMembersEdit = /*#__PURE__*/function (_Component) {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57,
+            lineNumber: 58,
             columnNumber: 25
           }
         }, "Advanced"),
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54,
+          lineNumber: 55,
           columnNumber: 13
         }
       }))), wp.element.createElement("div", {
@@ -157,7 +157,7 @@ var TeamMembersEdit = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61,
+          lineNumber: 62,
           columnNumber: 9
         }
       }, wp.element.createElement(RichText, {
@@ -170,7 +170,7 @@ var TeamMembersEdit = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62,
+          lineNumber: 63,
           columnNumber: 11
         }
       }), wp.element.createElement(RichText, {
@@ -183,7 +183,7 @@ var TeamMembersEdit = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73,
+          lineNumber: 74,
           columnNumber: 11
         }
       })));
@@ -1480,6 +1480,11 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+/**
+ * A component that provides a sidebar panel
+ * with options to hide on different screen
+ * sizes.
+ */
 
 var ResponsiveDisplay = /*#__PURE__*/function (_Component) {
   _inherits(ResponsiveDisplay, _Component);
@@ -1502,14 +1507,14 @@ var ResponsiveDisplay = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9,
+          lineNumber: 14,
           columnNumber: 9
         }
       }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14,
+          lineNumber: 20,
           columnNumber: 11
         }
       }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
@@ -1519,14 +1524,14 @@ var ResponsiveDisplay = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15,
+          lineNumber: 21,
           columnNumber: 13
         }
       })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22,
+          lineNumber: 29,
           columnNumber: 11
         }
       }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
@@ -1536,14 +1541,14 @@ var ResponsiveDisplay = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23,
+          lineNumber: 30,
           columnNumber: 13
         }
       })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30,
+          lineNumber: 38,
           columnNumber: 11
         }
       }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
@@ -1553,7 +1558,7 @@ var ResponsiveDisplay = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31,
+          lineNumber: 39,
           columnNumber: 13
         }
       }))));

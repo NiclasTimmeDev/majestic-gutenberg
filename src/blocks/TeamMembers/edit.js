@@ -24,6 +24,7 @@ class TeamMembersEdit extends Component {
     this.props.setAttributes({ info });
   };
 
+  // Panel settings for the design tab settings.
   designSettings = (
     <>
       <ResponsiveDisplay

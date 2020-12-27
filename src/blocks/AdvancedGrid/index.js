@@ -3,6 +3,7 @@ import { registerBlockType } from '@wordpress/blocks';
 const InnerBlocks = wp.blockEditor.InnerBlocks;
 const InspectorControls = wp.blockEditor.InspectorControls;
 import EditAdvancedGrid from './edit';
+import './_advancedGrid.scss';
 
 registerBlockType('majestic-gutenberg/advanced-grid', {
   title: __('Advanced Grid', 'majestic-gutenberg'),

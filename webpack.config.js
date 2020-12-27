@@ -1,3 +1,6 @@
+var autoprefixer = require('autoprefixer');
+var MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = (env, argv) => {
   /**
    * Check if we are in development mode.
@@ -20,6 +23,12 @@ module.exports = (env, argv) => {
     output: {
       filename: '[name].js',
     },
+    // Extract all css files that are imported into JS and create separate css file.
+    plugins: [
+      new MiniCSSExtractPlugin({
+        filename: 'bundle.css',
+      }),
+    ],
     // Get better source mapping in error messages.
     devtool: 'source-map',
     module: {
@@ -55,6 +64,23 @@ module.exports = (env, argv) => {
               ],
             },
           },
+        },
+        // Autoprefix and load all stylesheets.
+        {
+          test: /\.(sa|sc|c)ss$/,
+          use: [
+            MiniCSSExtractPlugin.loader,
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [autoprefixer()],
+                },
+              },
+            },
+            'sass-loader',
+          ],
         },
       ],
     },

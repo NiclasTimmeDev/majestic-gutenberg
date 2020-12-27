@@ -91,7 +91,7 @@ function majestic_gutenberg_init()
     // Register the editor CSS stylesheet.
     wp_register_style(
         'majestic-gutenberg-editor-style',
-        plugins_url('dist/styles.css', __FILE__),
+        plugins_url('dist/bundle.css', __FILE__),
         array('wp-edit-blocks')
     );
 

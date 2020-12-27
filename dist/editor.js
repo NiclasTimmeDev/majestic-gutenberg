@@ -214,10 +214,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/blocks/AdvancedGrid/edit.js");
+/* harmony import */ var _advancedGrid_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_advancedGrid.scss */ "./src/blocks/AdvancedGrid/_advancedGrid.scss");
 
 
 var InnerBlocks = wp.blockEditor.InnerBlocks;
 var InspectorControls = wp.blockEditor.InspectorControls;
+
 
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)('majestic-gutenberg/advanced-grid', {
   title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Advanced Grid', 'majestic-gutenberg'),
@@ -1823,13 +1825,15 @@ var ResponsiveDisplay = /*#__PURE__*/function (_Component) {
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _blocks_firstblock_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/firstblock/index */ "./src/blocks/firstblock/index.js");
-/* harmony import */ var _blocks_inlineNotice_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/inlineNotice/index */ "./src/blocks/inlineNotice/index.js");
-/* harmony import */ var _blocks_Testimonials_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/Testimonials/index */ "./src/blocks/Testimonials/index.js");
-/* harmony import */ var _blocks_TeamMembers_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/TeamMembers/index */ "./src/blocks/TeamMembers/index.js");
-/* harmony import */ var _blocks_TeamMembers_parent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/TeamMembers/parent */ "./src/blocks/TeamMembers/parent.js");
-/* harmony import */ var _blocks_AdvancedGrid_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/AdvancedGrid/index */ "./src/blocks/AdvancedGrid/index.js");
-// First block.
+/* harmony import */ var _src_tailwind_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../src/tailwind.css */ "./src/tailwind.css");
+/* harmony import */ var _blocks_firstblock_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/firstblock/index */ "./src/blocks/firstblock/index.js");
+/* harmony import */ var _blocks_inlineNotice_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/inlineNotice/index */ "./src/blocks/inlineNotice/index.js");
+/* harmony import */ var _blocks_Testimonials_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/Testimonials/index */ "./src/blocks/Testimonials/index.js");
+/* harmony import */ var _blocks_TeamMembers_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/TeamMembers/index */ "./src/blocks/TeamMembers/index.js");
+/* harmony import */ var _blocks_TeamMembers_parent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/TeamMembers/parent */ "./src/blocks/TeamMembers/parent.js");
+/* harmony import */ var _blocks_AdvancedGrid_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/AdvancedGrid/index */ "./src/blocks/AdvancedGrid/index.js");
+ // First block.
+
 
 
 
@@ -1868,6 +1872,30 @@ var composeClasses = function composeClasses(defaultClasses, dynamicClass) {
   var mergedArray = defaultClasses.concat(dynamicClass);
   return mergedArray.join(' ');
 };
+
+/***/ }),
+
+/***/ "./src/blocks/AdvancedGrid/_advancedGrid.scss":
+/*!****************************************************!*\
+  !*** ./src/blocks/AdvancedGrid/_advancedGrid.scss ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/tailwind.css":
+/*!**************************!*\
+  !*** ./src/tailwind.css ***!
+  \**************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 

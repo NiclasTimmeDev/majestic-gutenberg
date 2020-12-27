@@ -40,7 +40,6 @@ class EditAdvancedGrid extends Component {
       <>
         <InspectorControls>
           <Panel>
-            <button>Hello</button>
             <PanelBody title={__('Columns', 'majestic-gutenberg')}>
               <PanelRow>
                 <RangeControl
@@ -63,7 +62,7 @@ class EditAdvancedGrid extends Component {
             </PanelBody>
           </Panel>
         </InspectorControls>
-        <div className={containerClasses}>
+        <div className={`advanced-grid cols-per-row-${colsPerRow}`}>
           <InnerBlocks
             renderAppender={() => <InnerBlocks.ButtonBlockAppender />}
           />

@@ -109,26 +109,19 @@ var EditAdvancedGrid = /*#__PURE__*/function (_Component) {
           lineNumber: 42,
           columnNumber: 11
         }
-      }, wp.element.createElement("button", {
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Columns', 'majestic-gutenberg'),
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 43,
           columnNumber: 13
         }
-      }, "Hello"), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Columns', 'majestic-gutenberg'),
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 44,
-          columnNumber: 13
-        }
       }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45,
+          lineNumber: 44,
           columnNumber: 15
         }
       }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
@@ -142,14 +135,14 @@ var EditAdvancedGrid = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46,
+          lineNumber: 45,
           columnNumber: 17
         }
       }))), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55,
+          lineNumber: 54,
           columnNumber: 13
         }
       }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
@@ -163,15 +156,15 @@ var EditAdvancedGrid = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56,
+          lineNumber: 55,
           columnNumber: 15
         }
       })))), wp.element.createElement("div", {
-        className: containerClasses,
+        className: "advanced-grid cols-per-row-".concat(colsPerRow),
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66,
+          lineNumber: 65,
           columnNumber: 9
         }
       }, wp.element.createElement(InnerBlocks, {
@@ -180,7 +173,7 @@ var EditAdvancedGrid = /*#__PURE__*/function (_Component) {
             __self: _this2,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 68,
+              lineNumber: 67,
               columnNumber: 35
             }
           });
@@ -188,7 +181,7 @@ var EditAdvancedGrid = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67,
+          lineNumber: 66,
           columnNumber: 11
         }
       })));

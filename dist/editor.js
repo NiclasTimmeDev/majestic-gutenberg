@@ -2,6 +2,250 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/blocks/AdvancedGrid/edit.js":
+/*!*****************************************!*\
+  !*** ./src/blocks/AdvancedGrid/edit.js ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _services_services__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../services/services */ "./src/services/services.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var _jsxFileName = "/Users/niclastimm/code/projects/gutenberg/app/public/wp-content/plugins/majestic-gutenberg/src/blocks/AdvancedGrid/edit.js";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+var InnerBlocks = wp.blockEditor.InnerBlocks;
+var InspectorControls = wp.blockEditor.InspectorControls;
+
+
+var EditAdvancedGrid = /*#__PURE__*/function (_Component) {
+  _inherits(EditAdvancedGrid, _Component);
+
+  var _super = _createSuper(EditAdvancedGrid);
+
+  function EditAdvancedGrid() {
+    var _this;
+
+    _classCallCheck(this, EditAdvancedGrid);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "onChangeColsPerRow", function (cols) {
+      _this.props.setAttributes({
+        colsPerRow: cols
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onChangeColGap", function (gap) {
+      _this.props.setAttributes({
+        gap: gap
+      });
+    });
+
+    return _this;
+  }
+
+  _createClass(EditAdvancedGrid, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var attributes = this.props.attributes;
+      var colsPerRow = attributes.colsPerRow,
+          gap = attributes.gap;
+      var containerClasses = (0,_services_services__WEBPACK_IMPORTED_MODULE_3__.composeClasses)(['grid'], ["grid-cols-".concat(this.props.attributes.colsPerRow), "gap-".concat(this.props.attributes.gap)]);
+      var innerBlocks = [];
+
+      for (var i = 1; i <= colsPerRow; i++) {
+        innerBlocks.push();
+      }
+
+      return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(InspectorControls, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 9
+        }
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Panel, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42,
+          columnNumber: 11
+        }
+      }, wp.element.createElement("button", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43,
+          columnNumber: 13
+        }
+      }, "Hello"), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Columns', 'majestic-gutenberg'),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44,
+          columnNumber: 13
+        }
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45,
+          columnNumber: 15
+        }
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Number of columns', 'majestic-gutenberg'),
+        value: colsPerRow,
+        onChange: function onChange(columns) {
+          return _this2.onChangeColsPerRow(columns);
+        },
+        min: 1,
+        max: 12,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46,
+          columnNumber: 17
+        }
+      }))), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55,
+          columnNumber: 13
+        }
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Column gaps', 'majestic-gutenberg'),
+        value: gap,
+        onChange: function onChange(gap) {
+          return _this2.props(gap);
+        },
+        min: 1,
+        max: 4,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56,
+          columnNumber: 15
+        }
+      })))), wp.element.createElement("div", {
+        className: containerClasses,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66,
+          columnNumber: 9
+        }
+      }, wp.element.createElement(InnerBlocks, {
+        renderAppender: function renderAppender() {
+          return wp.element.createElement(InnerBlocks.ButtonBlockAppender, {
+            __self: _this2,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 68,
+              columnNumber: 35
+            }
+          });
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67,
+          columnNumber: 11
+        }
+      })));
+    }
+  }]);
+
+  return EditAdvancedGrid;
+}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (EditAdvancedGrid);
+
+/***/ }),
+
+/***/ "./src/blocks/AdvancedGrid/index.js":
+/*!******************************************!*\
+  !*** ./src/blocks/AdvancedGrid/index.js ***!
+  \******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/blocks/AdvancedGrid/edit.js");
+
+
+var InnerBlocks = wp.blockEditor.InnerBlocks;
+var InspectorControls = wp.blockEditor.InspectorControls;
+
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)('majestic-gutenberg/advanced-grid', {
+  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Advanced Grid', 'majestic-gutenberg'),
+  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('An advanced Grid system that allows you to order and re-order your content in rows and columns.', 'majestic-gutenberg'),
+  category: 'majestic-gutenberg-category',
+  keywords: '',
+  icon: 'grid-view',
+  attributes: {
+    colsPerRow: {
+      type: 'number',
+      default: 3
+    },
+    gap: {
+      type: 'number',
+      default: 1
+    }
+  },
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__.default,
+  save: function save(_ref) {
+    var attributes = _ref.attributes;
+    var colsPerRow = attributes.colsPerRow,
+        gap = attributes.gap;
+    return null;
+  }
+});
+
+/***/ }),
+
 /***/ "./src/blocks/TeamMembers/edit.js":
 /*!****************************************!*\
   !*** ./src/blocks/TeamMembers/edit.js ***!
@@ -1584,12 +1828,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_Testimonials_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/Testimonials/index */ "./src/blocks/Testimonials/index.js");
 /* harmony import */ var _blocks_TeamMembers_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/TeamMembers/index */ "./src/blocks/TeamMembers/index.js");
 /* harmony import */ var _blocks_TeamMembers_parent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/TeamMembers/parent */ "./src/blocks/TeamMembers/parent.js");
+/* harmony import */ var _blocks_AdvancedGrid_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/AdvancedGrid/index */ "./src/blocks/AdvancedGrid/index.js");
 // First block.
 
 
 
 
 
+
+
+/***/ }),
+
+/***/ "./src/services/services.js":
+/*!**********************************!*\
+  !*** ./src/services/services.js ***!
+  \**********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "composeClasses": function() { return /* binding */ composeClasses; }
+/* harmony export */ });
+/**
+ * Create a ready to use class list based on array parameters.
+ *
+ * This is especially helpful when a classlist for an
+ * html element consists of some static classes but also
+ * some dynamic ones that depend on other variabes, for example.
+ *
+ * @param {string[]} defaultClasses
+ *   The classes that will definitely be used.
+ * @param {array} dynamicClass
+ *   The classes that should also be added but have dynamic values.
+ *
+ * @return {string}
+ *   The class list ready to insert into an html element.s
+ */
+var composeClasses = function composeClasses(defaultClasses, dynamicClass) {
+  var mergedArray = defaultClasses.concat(dynamicClass);
+  return mergedArray.join(' ');
+};
 
 /***/ }),
 

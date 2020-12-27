@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint src",
-    "start": "webpack --mode=development --watch",
+    "start": "npm run build-css && webpack --mode=development --watch",
     "production": "npm run lint && webpack --mode=production && gulp bundle",
     "build-css": "postcss src/styles.css -o dist/styles.css"
   },

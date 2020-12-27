@@ -105,5 +105,6 @@ function majestic_gutenberg_init()
     // Team Members Block.
     majestic_gutenberg_register_block('team-members');
     majestic_gutenberg_register_block('parent');
+    majestic_gutenberg_register_block('advanced-grid');
 }
 add_action('init', 'majestic_gutenberg_init');
